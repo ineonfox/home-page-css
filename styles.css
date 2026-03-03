@@ -86,3 +86,46 @@ button {
 button:hover {
     background-color: hsl(217, 60%, 49%);
 }
+
+/* Flex container for the whole info part, centering the elements */
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+
+/* Styling the info header + giving it full width, 
+so that other elements wrap onto the next row */
+.info-header {
+    color: #1F2937;
+    font-size: 36px;
+    font-weight: 900;
+    flex-basis: 100%;
+    text-align: center;
+    padding-top: 50px;
+}
+
+/* styling so that size is 100x100px, flex: 0 so that it doesn't compress it */
+.info-img {
+    height: 100px;
+    width: 100px;
+    border: 3px solid #3882F6;
+    border-radius: 8px;
+    flex: 0 0 100px;
+}
+
+/* flex: 1 with size so that text can shrink, also aligning by center */
+.info {
+    flex: 0 1 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-text {
+    text-align: center;
+    font-weight: 300;
+}

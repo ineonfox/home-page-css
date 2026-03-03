@@ -129,3 +129,26 @@ so that other elements wrap onto the next row */
     text-align: center;
     font-weight: 300;
 }
+
+.quote-container {
+    background-color: #E5E7EB;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 80px 26%;
+}
+
+.quote {
+    color: #1F2937;
+    font-size: 36px;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.quote-author {
+    color: #1F2937;
+    font-weight: 700;
+    font-size: 18px;
+}

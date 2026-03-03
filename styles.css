@@ -11,6 +11,11 @@ body, p, ul {
     list-style-type: none;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 /* header flex for moving the items to the opposite sides */
 .header {
     background-color: #1F2937;
@@ -19,7 +24,8 @@ body, p, ul {
     font-weight: 700;
     display: flex;
     justify-content: space-between;
-    padding: 16px 26%;
+    padding: 16px 25%;
+    /* flex: 0 1 0px; */
 }
 
 /* flex list, so that items are sorted horizontally with a gap */
@@ -54,10 +60,11 @@ a, .hero-text p {
     display: flex;
     gap: 40px;
     justify-content: center;
-    padding: 100px 0;
+    padding: 100px 25%;
 }
 
-/* sizing for a 16:9 image, flex container for text inside  */
+/*  sizing for a 16:9 image, flex container for text inside
+    image stays stable, while flexing text to the side */
 .hero-img {
     height: 280px;
     width: 500px;
@@ -66,10 +73,12 @@ a, .hero-text p {
     align-items: center;
     background-color: #bbbbbb77;
     color: #E5E7EB;
+    flex: 0 0 500px;
 }
 
+/* flexing text, while image stays stable */
 .hero-text {
-    width: 20%;
+    flex: 1 1 400px;
 }
 
 /* general button styling */
@@ -93,7 +102,7 @@ button:hover {
     flex-wrap: wrap;
     justify-content: center;
     gap: 50px;
-    margin-bottom: 100px;
+    padding: 50px 25% 100px;
 }
 
 /* Styling the info header + giving it full width, 
@@ -109,16 +118,16 @@ so that other elements wrap onto the next row */
 
 /* styling so that size is 100x100px, flex: 0 so that it doesn't compress it */
 .info-img {
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    width: 120px;
     border: 3px solid #3882F6;
     border-radius: 8px;
-    flex: 0 0 100px;
+    flex: 0 0 120px;
 }
 
 /* flex: 1 with size so that text can shrink, also aligning by center */
 .info {
-    flex: 0 1 150px;
+    flex: 1 1 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -130,11 +139,12 @@ so that other elements wrap onto the next row */
     font-weight: 300;
 }
 
+/* Flex container for the quote, centered with some padding- */
 .quote-container {
     background-color: #E5E7EB;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     flex-direction: column;
     padding: 80px 26%;
 }
@@ -147,8 +157,11 @@ so that other elements wrap onto the next row */
     margin-bottom: 8px;
 }
 
+/* Align-self: flex-end so that the quote author appears on the left side */
 .quote-author {
     color: #1F2937;
     font-weight: 700;
     font-size: 18px;
+    align-self: flex-end;
 }
+

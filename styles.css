@@ -4,11 +4,14 @@
     font-family: Roboto;
 }
 
-body {
+/* removing default styling */
+body, p, ul {
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 
+/* header flex for moving the items to the opposite sides */
 .header {
     background-color: #1F2937;
     color: #F9FAF8;
@@ -19,11 +22,9 @@ body {
     padding: 16px 26%;
 }
 
+/* flex list, so that items are sorted horizontally with a gap */
 ul {
     display: flex;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
     gap: 8px;
 }
 
@@ -38,11 +39,16 @@ a {
     font-weight: 900;
 }
 
+
 a, .hero-text p {
     font-size: 18px;
     color: #E5E7EB;
+    padding-bottom: 16px;
 }
 
+/* flex container for the text + image.
+    no need for flex container for .hero-text, 
+    since it's anyway sorted like in normal flow */
 .hero {
     background-color: #1F2937;
     display: flex;
@@ -51,13 +57,9 @@ a, .hero-text p {
     padding: 100px 0;
 }
 
-p {
-    margin: 0;
-    padding-bottom: 16px;
-}
-
+/* sizing for a 16:9 image, flex container for text inside  */
 .hero-img {
-    height: 250px;
+    height: 280px;
     width: 500px;
     display: flex;
     justify-content: center;
@@ -70,6 +72,7 @@ p {
     width: 20%;
 }
 
+/* general button styling */
 button {
     background-color: #3882F6;
     color: #F9FAF8;

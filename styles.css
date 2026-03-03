@@ -177,6 +177,7 @@ so that other elements wrap onto the next row */
     align-self: flex-end;
 }
 
+/* Flex container to space evenly text and the button, with color and margin */
 .action-container {
     margin: 100px auto;
     display: flex;
@@ -191,4 +192,14 @@ so that other elements wrap onto the next row */
 .action-container .action-big {
     font-weight: 700;
     font-size: 18px;
+}
+
+/* Simple flex footer to center the text */
+footer {
+    color: #F9FAF8;
+    background-color: #1F2937;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
 }

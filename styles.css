@@ -82,15 +82,26 @@ a, .hero-text p {
     flex: 1 1 400px;
 }
 
-/* general button styling */
-button {
+/* button styling */
+button.full {
     background-color: #3882F6;
     color: #F9FAF8;
-    border-radius: 5px;
-    padding: 5px 30px;
+    border-radius: 8px;
+    padding: 8px 30px;
     border: none;
     cursor: pointer;
     text-decoration: none;
+}
+
+button.empty {
+    background-color: transparent;
+    color: #F9FAF8;
+    border-radius: 8px;
+    padding: 8px 30px;
+    border: 1px solid white;
+    cursor: pointer;
+    text-decoration: none;
+    align-self: center;
 }
 
 button:hover {
@@ -103,7 +114,7 @@ button:hover {
     flex-wrap: wrap;
     justify-content: center;
     gap: 50px;
-    padding: 50px 25% 100px;
+    padding: 50px 30% 100px;
 }
 
 /* Styling the info header + giving it full width, 
@@ -147,7 +158,7 @@ so that other elements wrap onto the next row */
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 80px 26%;
+    padding: 100px 30%;
 }
 
 .quote {
@@ -166,3 +177,18 @@ so that other elements wrap onto the next row */
     align-self: flex-end;
 }
 
+.action-container {
+    margin: 100px auto;
+    display: flex;
+    background-color: #3882F6;
+    border-radius: 10px;
+    justify-content: space-evenly;
+    width: 50%;
+    padding: 48px 0;
+    color: #F9FAF8;
+}
+
+.action-container .action-big {
+    font-weight: 700;
+    font-size: 18px;
+}

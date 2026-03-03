@@ -58,6 +58,7 @@ a, .hero-text p {
 .hero {
     background-color: #1F2937;
     display: flex;
+    flex-wrap: wrap;
     gap: 40px;
     justify-content: center;
     padding: 100px 25%;
